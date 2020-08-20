@@ -5,7 +5,6 @@ h1 {
   font-size: larger;
   display: block;
   margin-bottom: 2px;
-  border: 1px solid green;
 }
 h2 {
   font-size: medium;
@@ -30,6 +29,7 @@ p {
 .carla_main {
   border: 2px solid rgb(199, 196, 196);
   border-radius: 5px;
+  padding: 15px;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 20% 15% 30% 35%;
@@ -40,34 +40,28 @@ p {
     "p p p p p p p p p p p p"
     "b b b b b b b b b b b b";
 }
-.carla_main > * {
-  margin-left: 15px;
-}
+
 .carla-1 {
   grid-area: h;
-  margin-top: 15px;
 }
 .carla-2 {
   grid-area: t;
-  border: 1px solid blue;
 }
 .carla-p {
   grid-area: p;
-  border: 1px solid red;
-  margin-right: 15px;
 }
 .button-wrapper {
-  grid-area:b;
-  border-top:solid 2px rgb(199, 196, 196);
-  display:flex;
+  grid-area: b;
+  border-top: solid 2px rgb(199, 196, 196);
+  display: flex;
   justify-content: center;
   align-content: center;
 }
 .approve-c {
-  flex-grow:1;
+  flex-grow: 1;
 }
 .decline-c {
-  flex-grow:1;
+  flex-grow: 1;
 }
 .p-c {
   grid-area: i;
@@ -80,31 +74,25 @@ p {
 .marijn_main {
   border: 2px solid rgb(199, 196, 196);
   border-radius: 5px;
+  padding: 15px;
   grid-area: m;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: 20% 15% 30% 35%;
+  grid-template-rows: 20% 20% 30% 35%;
   grid-template-areas:
     "h h h h h h h h h i i i"
     "t t t t t t t t t i i i"
     "p p p p p p p p p p p p"
     "b b b b b b b b b b b b";
 }
-.marijn_main > * {
-  margin-left: 15px;
-}
 .marijn-1 {
   grid-area: h;
-  margin-top: 15px;
 }
 .marijn-2 {
   grid-area: t;
-  border: 1px solid blue;
 }
 .marijn-p {
   grid-area: p;
-  border: 1px solid red;
-  margin-right: 15px;
 }
 
 .p-m {
@@ -115,36 +103,32 @@ p {
   justify-self: center;
 }
 
-div[class*="approve"] {
-  margin-right:0;
+button[class*="approve"] {
+  margin-right: 0;
   color: rgb(22, 245, 22);
   border-left: 2px solid;
   border-top: 2px solid;
   border-bottom: 2px solid;
+  border-right: none;
   border-color: rgb(22, 245, 22);
   border-top-left-radius: 3px;
   border-bottom-left-radius: 3px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   font-weight: bold;
-  line-height: 30px;
-  height: 30px;
-  text-align:center;
-  flex-grow:1
+  flex-grow: 1;
 }
 
-div[class*="decline"] {
-  margin-left:0;
+button[class*="decline"] {
+  margin-left: 0;
   display: block;
   color: red;
   border: 2px solid;
   border-color: red;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
-  margin-right: 25%;
+  margin-top: 15px;
   margin-bottom: 15px;
   font-weight: bold;
-  line-height: 30px;
-  height: 30px;
-  text-align:center;
-  flex-grow:1;
+  flex-grow: 1;
 }
-  
