@@ -1,0 +1,154 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+body * h1 {
+  font-size: larger;
+  display: block;
+  margin-bottom: 0;
+  border: 1px solid green;
+}
+h2 {
+  font-size: medium;
+  color: grey;
+  font-weight: normal;
+  display: block;
+  margin-top: 0;
+}
+p {
+  display: block;
+}
+
+.card_wrapper {
+  display: grid;
+  grid-template-columns: 2;
+  column-gap: 4%;
+  grid-auto-columns: 45%;
+  height: 100px;
+  grid-template-rows: 1;
+  grid-template-areas: "c m";
+}
+
+.carla_main {
+  border: 2px solid rgb(199, 196, 196);
+  border-radius: 5px;
+  display: grid;
+  grid-template-columns: 12;
+  grid-template-rows: 20% 20% 40% 20%;
+  grid-area: c;
+  grid-template-areas:
+    "h h h h h h h h h i i i"
+    "t t t t t t t t t i i i"
+    "p p p p p p p p p p p p"
+    "a a a a a a d d d d d d";
+}
+.carla_main > * {
+  margin-left: 15px;
+}
+.carla-1 {
+  grid-area: h;
+  margin-top: 15px;
+}
+.carla-2 {
+  grid-area: t;
+  border: 1px solid blue;
+}
+.carla-p {
+  grid-area: p;
+  border: 1px solid red;
+  margin-right: 15px;
+}
+.approve-c {
+  grid-area: a;
+  width: 100%;
+  justify-self: end;
+}
+.decline-c {
+  grid-area: d;
+  width: 70%;
+  justify-self: start;
+  background-color: red;
+}
+.p-c {
+  grid-area: i;
+  width: 40%;
+  margin-top: 15px;
+  align-self: center;
+  justify-self: center;
+}
+
+.marijn_main {
+  border: 2px solid rgb(199, 196, 196);
+  border-radius: 5px;
+  grid-area: m;
+  display: grid;
+  grid-template-columns: 12;
+  grid-template-rows: 20% 20% 40% 20%;
+  grid-template-areas:
+    "h h h h h h h h h i i i"
+    "t t t t t t t t t i i i"
+    "p p p p p p p p p p p p"
+    "a a a a a a d d d d d d";
+}
+.marijn_main > * {
+  margin-left: 15px;
+}
+.marijn-1 {
+  grid-area: h;
+  margin-top: 15px;
+}
+.marijn-2 {
+  grid-area: t;
+  border: 1px solid blue;
+}
+.marijn-p {
+  grid-area: p;
+  border: 1px solid red;
+  margin-right: 15px;
+}
+.approve-m {
+  grid-area: a;
+  width: 100%;
+}
+.decline-m {
+  grid-area: d;
+  width: 70%;
+  justify-self: end;
+  justify-self:start;
+}
+.p-m {
+  grid-area: i;
+  width: 40%;
+  margin-top: 15px;
+  align-self: center;
+  justify-self: center;
+}
+
+div[class*="approve"] {
+  display: block;
+  margin: 0;
+  color: rgb(22, 245, 22);
+  border-left: 2px solid;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  border-color: rgb(22, 245, 22);
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  font-weight: bold;
+  line-height: 30px;
+  height: 30px;
+}
+
+div[class*="decline"] {
+  display: block;
+  margin: 0;
+  color: red;
+  border: 2px solid;
+  border-color: red;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  margin-right: 25%;
+  margin-bottom: 15px;
+  font-weight: bold;
+  line-height: 30px;
+  height: 30px;
+}
