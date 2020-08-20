@@ -1,10 +1,10 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
-body * h1 {
+h1 {
   font-size: larger;
   display: block;
-  margin-bottom: 0;
+  margin-bottom: 2px;
   border: 1px solid green;
 }
 h2 {
@@ -23,7 +23,6 @@ p {
   grid-template-columns: 2;
   column-gap: 4%;
   grid-auto-columns: 45%;
-  height: 100px;
   grid-template-rows: 1;
   grid-template-areas: "c m";
 }
@@ -32,14 +31,14 @@ p {
   border: 2px solid rgb(199, 196, 196);
   border-radius: 5px;
   display: grid;
-  grid-template-columns: 12;
-  grid-template-rows: 20% 20% 40% 20%;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 20% 15% 30% 35%;
   grid-area: c;
   grid-template-areas:
     "h h h h h h h h h i i i"
     "t t t t t t t t t i i i"
     "p p p p p p p p p p p p"
-    "a a a a a a d d d d d d";
+    "b b b b b b b b b b b b";
 }
 .carla_main > * {
   margin-left: 15px;
@@ -57,16 +56,18 @@ p {
   border: 1px solid red;
   margin-right: 15px;
 }
+.button-wrapper {
+  grid-area:b;
+  border-top:solid 2px rgb(199, 196, 196);
+  display:flex;
+  justify-content: center;
+  align-content: center;
+}
 .approve-c {
-  grid-area: a;
-  width: 100%;
-  justify-self: end;
+  flex-grow:1;
 }
 .decline-c {
-  grid-area: d;
-  width: 70%;
-  justify-self: start;
-  background-color: red;
+  flex-grow:1;
 }
 .p-c {
   grid-area: i;
@@ -81,13 +82,13 @@ p {
   border-radius: 5px;
   grid-area: m;
   display: grid;
-  grid-template-columns: 12;
-  grid-template-rows: 20% 20% 40% 20%;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 20% 15% 30% 35%;
   grid-template-areas:
     "h h h h h h h h h i i i"
     "t t t t t t t t t i i i"
     "p p p p p p p p p p p p"
-    "a a a a a a d d d d d d";
+    "b b b b b b b b b b b b";
 }
 .marijn_main > * {
   margin-left: 15px;
@@ -105,16 +106,7 @@ p {
   border: 1px solid red;
   margin-right: 15px;
 }
-.approve-m {
-  grid-area: a;
-  width: 100%;
-}
-.decline-m {
-  grid-area: d;
-  width: 70%;
-  justify-self: end;
-  justify-self:start;
-}
+
 .p-m {
   grid-area: i;
   width: 40%;
@@ -124,8 +116,7 @@ p {
 }
 
 div[class*="approve"] {
-  display: block;
-  margin: 0;
+  margin-right:0;
   color: rgb(22, 245, 22);
   border-left: 2px solid;
   border-top: 2px solid;
@@ -136,11 +127,13 @@ div[class*="approve"] {
   font-weight: bold;
   line-height: 30px;
   height: 30px;
+  text-align:center;
+  flex-grow:1
 }
 
 div[class*="decline"] {
+  margin-left:0;
   display: block;
-  margin: 0;
   color: red;
   border: 2px solid;
   border-color: red;
@@ -151,4 +144,7 @@ div[class*="decline"] {
   font-weight: bold;
   line-height: 30px;
   height: 30px;
+  text-align:center;
+  flex-grow:1;
 }
+  
